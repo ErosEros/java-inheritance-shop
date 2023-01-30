@@ -3,7 +3,7 @@ package shop.javaInheritance;
 public class Televisori extends Prodotto {
 	double dimensioni;
 	boolean proprieta;
-	public Televisori(String nome, String marca, double prezzo, int iva, double dimensioni,
+	public Televisori(String nome, String marca, double prezzo, double dimensioni,
 			boolean proprieta) {
 		super(nome, marca, prezzo);
 		this.dimensioni = dimensioni;
