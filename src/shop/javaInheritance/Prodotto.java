@@ -1,33 +1,36 @@
 package shop.javaInheritance;
-
+import java.util.Random;
 public class Prodotto {
 
 	private int codice ;
 	String nome;
 	String marca;
 	double prezzo;
-	int iva = 22;
+	double iva ;
 	
-	public Prodotto(int codice, String nome, String marca, double prezzo, int iva) {
+	public Prodotto( String nome, String marca, double prezzo) {
 		super();
-		this.codice = codice;
+		this.codice = r.nextInt(1000);
 		this.nome = nome;
 		this.marca = marca;
 		this.prezzo = prezzo;
-		this.iva = iva;
+		this.iva = (this.prezzo *22) /100;
 	}
+	
+//	Random 
+	Random r = new Random();
 
 // GETTERS E SETTERS	
 	
 	public int getCodice() {
-		return codice;
+		return this.codice;
 	}
 
 
 
-	public void setCodice(int codice) {
-		this.codice = codice;
-	}
+//	public void setCodice(int codice) {
+//		this.codice = codice;
+//	}
 
 
 
@@ -67,7 +70,7 @@ public class Prodotto {
 
 
 
-	public int getIva() {
+	public double getIva() {
 		return iva;
 	}
 
@@ -85,7 +88,7 @@ public class Prodotto {
 	
 // METODO PER VISUALIZZARE PREZZO + IVA
 	double prezzoConIva() {
-		return ( prezzo +(prezzo * iva) /100);
+		return  prezzo + iva;
 	}
 	}
 

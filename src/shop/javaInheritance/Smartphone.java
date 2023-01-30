@@ -1,11 +1,23 @@
 package shop.javaInheritance;
 
 public class Smartphone extends Prodotto{
-	int	codiceMiei;
+	int	codiceImei;
 	int memoria;
-	public Smartphone(int codice, String nome, String marca, double prezzo, int iva, int codiceMiei, int memoria) {
-		super(codice, nome, marca, prezzo, iva);
-		this.codiceMiei = codiceMiei;
+	public Smartphone( String nome, String marca, double prezzo, int codiceImei, int memoria) {
+		super( nome, marca, prezzo);
+		this.codiceImei = codiceImei;
+		this.memoria = memoria;
+	}
+	public int getCodiceMiei() {
+		return codiceImei;
+	}
+	public void setCodiceMiei(int codiceImei) {
+		this.codiceImei = codiceImei;
+	}
+	public int getMemoria() {
+		return memoria;
+	}
+	public void setMemoria(int memoria) {
 		this.memoria = memoria;
 	}
 	
